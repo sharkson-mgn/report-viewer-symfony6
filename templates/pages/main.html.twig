@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Raport viewer{% endblock %}
+
+{% block body %}
+<div class="container-flow">
+    <div class="row">
+        <div class="col-3">
+            <form id="filter" {{ stimulus_controller('gridController') }}>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Wybierz lokal:</label>
+                    <select class="form-select mb-3" aria-label="Lokal" name="local" id="local">
+                        <option value="" selected>Wszystkie</option>
+                    </select>
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Od:</span>
+                    <input type="date" class="form-control" aria-label="Od" aria-describedby="basic-addon1" name="from" id="from">
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon2">Do:</span>
+                    <input type="date" class="form-control" aria-label="Do" aria-describedby="basic-addon2" name="to" id="to">
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <input type="reset" class="btn btn-light btn-sm" value="Wyczyść" />
+                    </div>
+                    <div class="col text-right">
+                        <input type="submit" class="btn btn-primary btn-sm d-block" value="Zatwierdź" />
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col">
+            <div id="table"></div>
+        </div>
+    </div>
+</div>
+{% endblock %}

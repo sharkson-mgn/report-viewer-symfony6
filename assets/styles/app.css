@@ -1,0 +1,7 @@
+@import '~bootstrap';
+@import '~@fortawesome/fontawesome-free/css/all.css';
+@import "~gridjs/dist/theme/mermaid.min.css";
+
+body {
+    background-color: lightgray;
+}
