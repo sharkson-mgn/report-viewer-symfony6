@@ -19,7 +19,7 @@ Hello! Please read this first before You want to check this repo. A week ago I n
 
 Befor You can use this repo You must do many things:
 
-`composer install`
+`composer update`
 
 `yarn install`
 
